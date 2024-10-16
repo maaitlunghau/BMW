@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div {
+            color: #fff;
+            background-color: #00f;
+            width: 300px;
+            padding: 50px;
+        }
+
+        #khuvuc1 {
+            position: absolute;
+            top: 405px;
+            left: 100px;
+            background-color: cadetblue;
+            z-index: 2;
+        }
+
+        #khuvuc2 {
+            position: absolute;
+            top: 400px;
+            left: 105px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>Ho Chi Minh City</div>
+    <div>Da Nang</div>
+    <div>Ha Noi Capital</div>
+    <div id="khuvuc1">
+        Phan Thiet
+    </div>
+    <div id="khuvuc2">
+        Da Lat
+    </div>
+</body>
+</html>

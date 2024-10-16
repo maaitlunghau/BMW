@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doCal(ch){
+            if(ch != "=" ){
+                switch(ch){
+                    case "C":
+                        document.getElementById("txtDisplay").value = "";
+                        break;    
+                    default:
+                        document.getElementById("txtDisplay").value += ch;
+                        break;
+                }                
+            }
+            else{
+                var s = document.getElementById("txtDisplay").value;
+                document.getElementById("txtDisplay").value = eval(s);
+            }
+        }
+    </script>
+
+    <style>
+        /* 1. Element selector */
+        button{
+            width: 175px; 
+            height: 30px;
+        }
+
+        h1, h2 {
+            color: red; 
+            font-weight: bold; 
+            font-style: italic; text-decoration:underline; 
+            text-align: center;
+        }
+
+        /* h2 {
+            color: red; 
+            font-weight: bold; 
+            font-style: italic; text-decoration:underline; 
+            text-align: center;
+        } */
+
+        /* 2. Class selector */
+
+        .tenClass {
+            color: green;
+            text-align: right;
+        }
+
+        /* 3. ID selector */
+        #txtDisplay{
+            width: 165px; 
+            height: 35px;
+            color: white;
+            font-size: 15pt;
+            text-align: right;
+            background-color:darkgray;
+        }
+        #btnNum{
+            width: 40px;
+            height: 30px;
+        }
+
+        /* 4. Universal selector */
+        * {
+            font-family: Verdana;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Internal / Element Selector</h1>
+    <h1>Another H1 Element</h1>
+    <h2>Heading 2 Element</h2>
+    <hr>
+    <h1>Internal / Element Selector</h1>
+    <h1 style="color: blue">Another H1 Element</h1>
+    <h2>Heading 2 Element</h2>
+    <hr>
+    <h1 class="tenClass">My Class</h1>
+    <div align="center">
+        <input id="txtDisplay" placeholder="0" readonly>
+        <p>
+        <input type="button" id="btnNum" value="1" onClick="doCal('1')">
+        <input type="button" id="btnNum" value="2" onClick="doCal('2')">
+        <input type="button" id="btnNum" value="3" onClick="doCal('3')">
+        <input type="button" id="btnNum" value="*" onClick="doCal('*')">
+        <br>
+        <input type="button" id="btnNum" value="4" onClick="doCal('4')">
+        <input type="button" id="btnNum" value="5" onClick="doCal('5')">
+        <input type="button" id="btnNum" value="6" onClick="doCal('6')">
+        <input type="button" id="btnNum" value="/" onClick="doCal('/')">
+        <br>
+        <input type="button" id="btnNum" value="7" onClick="doCal('7')">
+        <input type="button" id="btnNum" value="8" onClick="doCal('8')">
+        <input type="button" id="btnNum" value="9" onClick="doCal('9')">
+        <input type="button" id="btnNum" value="+" onClick="doCal('+')">
+        <br>
+        <input type="button" id="btnNum" value="0" onClick="doCal('0')">
+        <input type="button" id="btnNum" value="." onClick="doCal('.')">
+        <input type="button" id="btnNum" value="=" onClick="doCal('=')">
+        <input type="button" id="btnNum" value="-" onClick="doCal('-')">
+        <p>
+        <button type="button" onClick="doCal('C')">Clear All</button> 
+    </div>
+
+</body>
+</html>
+<!--
+    1. Inline
+    2. Internal (x)
+        - selector:
+            + Element:
+            + Class:
+            + id:
+            + universal:   
+    3. External
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+    <style>
+        * {
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Member Register Form</h1>
+    <form action="../session05_Bootstrap/ex04_Carousel.html">
+        <!-- Input -->
+        <h3>Account Information</h3>
+        Email: <input type="email" autofocus placeholder="Enter email" required> <br> 
+        <!--autofocus: luôn hiển thị con trỏ ở chỗ email-->
+        Password: <input type="password" required> <br>
+        Confirmed Password: <input type="password" required> <br>
+        <h3>Personal Information</h3>
+        Full name: <input placeholder="VD: Nguyen Van A" required> <br>
+        Avatar: <input type="file" required> <br>
+        Birthdate: <input type="date"> <br>
+        Phone:  <input type="number" required> <br>
+        Gender: 
+                <input type="radio" name="gioi-tinh" checked>Male
+                <input type="radio"name="gioi-tinh">Female 
+                <input type="radio" name="gioi-tinh">Khác
+                <br>
+        Hobbies: 
+                <input type="checkbox" name="so-thich" checked>Footbal
+                <input type="checkbox"name="so-thich" checked>Music
+                <input type="checkbox"name="so-thich">Swimming
+                <br>
+        <!-- TextArea/Select -->
+        Country:
+        <select> 
+        <!-- select: thả bảng danh sách và chỉ chọn 1-->
+        <!-- select multiple: hiển thị DS và chọn đc nhiều-->
+        <option value="">Vietname</option>
+        <option value="">Laos</option>
+        <option value="">Cambodia</option>
+        </select><br>
+        Comments: <textarea cols="50" rows="3"></textarea>
+        <br>
+
+        <hr align="left" width="50%">
+        <!-- Button -->
+        <input type="submit" value="Register">
+        <input type="reset"  value="Clear all">
+        <input type="button" value="Help">
+
+    </form>
+</body>
+</html>
+<!--
+    1. Layout: Container, Block 
+        <form></form> 
+    2. Categories:
+        2.1. Fundamental
+            - Input
+            - TextArea/Select
+            - Button
+        2.2. HTML5 (new) (x)
+            - Element: <progress>, <datalist>,...
+            - Attributes: autofocus, placeholder, requied, checked...
+            - Type: email, number, date....
+        2.3. Advanced
+-->
