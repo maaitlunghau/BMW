@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table - Merge</title>
+    <style>
+        table, td, th {
+          border: 1px solid;
+        }
+        
+        table {
+          width: 80%;
+          border-collapse: collapse;
+          /* stype border đường đơn */
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        th {
+            color: maroon;
+            background-color: lightgrey;
+        }
+        </style>
+</head>
+<body>
+    
+    <table style="text-align: center;">
+        <caption><h1>Material List</h1></caption>
+        <tr>
+            <!-- caption: cho phép nội dung căn giữa bảng -->
+            <th>Country</th>
+            <th>NO</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th colspan="2">Function</th>
+        </tr>
+        <tr >
+            <td rowspan="2">Việt Nam</td>
+            <td>1</td>
+            <td>Vinfast</td>
+            <td>VF8 LUX plus</td>
+            <td>65 000</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+            <!-- <td>Việt Nam</td> -->
+            <td>2</td>
+            <td>Sunhouse</td>
+            <td>Bộ đồ gia dụng bếp</td>
+            <td>1 800</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        <tr >
+            <td rowspan="2">USA</td>
+            <td>1</td>
+            <td>Vinfast</td>
+            <td>VF8 LUX plus</td>
+            <td>65 000</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+            <!-- <td>Việt Nam</td> -->
+            <td>2</td>
+            <td>Sunhouse</td>
+            <td>Bộ đồ gia dụng bếp</td>
+            <td>1 800</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
+<!--
+    1. Layout: Container, Block
+        <table></table>
+    2. Details:
+        - Optional
+            + <thead>: header section
+            + <tbody>: body section
+            + <tfoot>: footer section
+        - Compulsory
+            + <tr>: table row
+            + <th>: table header/heading
+            + <td>: table data/detail
+-->

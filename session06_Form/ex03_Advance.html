@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Form</title>
+    <style>
+        * {
+            margin-left: 5px;
+        }
+
+        .star {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Member Register Form</h1>
+    <form action="../session05_Bootstrap/ex04_Carousel.html">
+        <!-- Input -->
+        <h3>Account Information</h3>
+        <input type="hidden" value="token-value">
+        <input readonly value="1"> | <input readonly value="2"> | <input readonly value="3">
+        <!--readonly: máy đọc đc nhma user kh gõ vô đc-->
+        <br>
+        Email: <input autofocus> <br> <!-- Default: type="text" -->
+        Password: <input type="password" tabindex="1">
+        <span class="star">*</span>
+        <!-- Phải có dấu * , nếu kh bị trừ điểm-->
+        <br>
+        Confirmed Password: <input type="password"> <br>
+        <h3>Personal Information</h3>
+        Full name: <input> <br>
+        Avatar: <input type="file"> <br>
+        Phone:  <input> <br>
+        Gender: 
+                <input type="radio" name="gioi-tinh" checked>Male
+                <input type="radio"name="gioi-tinh">Female 
+                <input type="radio" name="gioi-tinh">Khác
+                <br>
+        Hobbies: 
+                <input type="checkbox" name="so-thich" checked>Footbal
+                <input type="checkbox"name="so-thich" checked>Music
+                <input type="checkbox"name="so-thich">Swimming
+                <br>
+        <!-- TextArea/Select -->
+        Country:
+        <select> 
+        <!-- select: thả bảng danh sách và chỉ chọn 1-->
+        <!-- select multiple: hiển thị DS và chọn đc nhiều-->
+        <option value="">Vietname</option>
+        <option value="">Laos</option>
+        <option value="">Cambodia</option>
+        </select><br>
+        Comment: <textarea cols="50" rows="3" tabindex="2" accesskey="m"></textarea>
+        <span class="star">*</span>
+        <br>
+        <hr align="left" width="50%">
+            Capchar: <input value="A5FC8z" disabled>
+                     <input type="text">
+        <hr align="left" width="50%">
+        <!-- Button -->
+        <input type="submit" value="Register">
+        <input type="reset"  value="Clear all">
+        <input type="button" value="Help">
+
+    </form>
+</body>
+</html>
+<!--
+    1. Layout: Container, Block 
+        <form></form> 
+    2. Categories: 
+        2.1. Fundamental
+            - Input
+            - TextArea/Select
+            - Button
+        2.2. HTML5 
+        2.3. Advanced (x)
+            - Hidden field
+            - disabled/Read-only
+                + Giống: ng dùng k nhập đc j vào hết
+                + Khác nhau: 
+                    readonly: đọc đc
+                        => mình xử lí đc
+                    disabled: kh đọc đc dữ liệu 
+                        => mình k xử lí đc
+            - Tab index
+            - Accesskey
+-->
