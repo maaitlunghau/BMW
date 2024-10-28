@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Location</title>
+    <style>
+        #txtURL {
+            width: 350px;
+            height: 40px;
+            border: thin solid maroon;
+        }
+
+
+    </style>
+    <script>
+        const duyetTrang = () => {
+            var url = document.getElementById('txtURL').value;
+            location.href = "https://" + url;
+        }
+    </script>
+</head>
+<body>
+    Địa chỉ web: <input id="txtURL" placeholder="Enter the web address">
+    <input style="height: 43px;" type="button" value="GO" onclick="duyetTrang();">
+</body>
+</html>

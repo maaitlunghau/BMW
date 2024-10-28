@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Object</title>
+    <script>
+        /*
+            constructor :  var days = new Array("Monday", "Tuesday", "Webnesday");
+            literal     :  var days = ["Monday", "Tuesday", "Webnesday"]
+        */
+
+        var days = new Array("Monday", "Tuesday", "Webnesday");
+        with (document) {
+            write("<h2>Using join method</h2>");
+            write(days.join(" - "));
+            write("<p>")
+            days.push("Thursday", "Friday", "Saturay", "Sunday");
+            write(days.join(" - "));
+
+            //------------------------------------------
+            write("<hr style='width: 50%; align='left'>");
+            write("<h2>Dùng vòng lập (thường)</h2>")
+            write("<pre>");
+
+            for (var i = 0; i < days.length; i++) {
+                writeln(days[i]);
+            }
+
+            write("<hr style='width: 50%; align='left'>");
+            //---------------------------------------------
+            write("<h2>Dùng vòng lập (for each)</h2>");
+            for (var ngay in days) {
+                writeln(days[ngay] + "<br>");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+
+</head>
+<script>
+    /*
+        ^  : statement to check the first character
+        $  : statement to check the last character
+        [0-9] : digit
+        [A-Za-z]   : alphabet
+        [A-Za-z0-9]: alphanumeric
+        +   : loop từ 1
+        *   : loop từ 0
+        \d  : digit
+        \w  : alphanumeric
+        \s  : space
+        {m,n} : min (max), max (n)
+        {m, } : min
+        {m}   : fix
+    */
+    function kiemTra() {
+        //I. Name
+        //1.Quan sát (Đọc lỗi)
+        var sName = document.getElementById("txtName").value;
+        var reName = /^[A-Za-z0-9 ]+$/;
+
+        //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+        if (!reName.test(sName)) { //(reName.test(sName) == false)
+            //3. Thổi còi
+            alert('Tên không được bỏ trống!');
+            document.getElementById("txtName").focus();
+            //4. Phạt
+            return false;
+        }
+
+        //II. Mail
+        //1.Quan sát (Đọc lỗi)
+        var sMail = document.getElementById("txtMail").value;
+        var reMail = /^\w+[@]\w+[.]\w+([.]\w+)?$/;
+
+        //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+        if (!reMail.test(sMail)) {
+            //3. Thổi còi
+            alert('Email is invalid !');
+            document.getElementById("txtMail").focus();
+            //4. Phạt
+            return false;
+        }
+
+        //III. Phone
+        //1.Quan sát (Đọc lỗi)
+        var sPhone = document.getElementById("txtPhone").value;
+        var rePhone = /^\d{8,12}$/;
+
+        //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+
+        if (isNaN(sPhone)) {
+            //3. Thổi còi
+            alert('Phone is digit only!');
+            document.getElementById("txtPhone").focus();
+            document.getElementById("txtPhone").value = "";
+            //4. Phạt
+            return false;
+        }
+
+        if (!rePhone.test(sPhone)) {
+            //3. Thổi còi
+            alert('Phone is only the rang of 8 to 12!');
+            document.getElementById("txtPhone").focus();
+            //4. Phạt
+            return false;
+        }
+
+        //IV. Show messages
+            //4.1. Prepare for content messages:
+            var mess = [];
+            mess.push("Your information");
+            mess.push("------------------")
+            mess.push("Full name: " + sName);
+            mess.push("Email: " + sMail);
+            mess.push("Phone: " + sPhone);
+
+            //4.2. Show messages:
+            alert(mess.join("\n"));
+    }
+</script>
+
+<body>
+    <form onsubmit="return kiemTra()">
+        Full name: <input id="txtName"> <br>
+        Email: <input id="txtMail"> <br>
+        Phone: <input id="txtPhone"> <br>
+        <button>Register</button>
+    </form>
+</body>
+
+</html>

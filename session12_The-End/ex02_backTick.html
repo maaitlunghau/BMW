@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackTick</title>
+    <script>
+        var name = prompt("Enter your name: ", "");
+        var greeting1 = "Good morning, ${name}";
+        var greeting2 = 'Good morning, ${name}';
+        var greeting3 = `Good morning, ${name}`;
+        //---------------------------
+        with(document) {
+           write(greeting1 + "<br>");
+           write(greeting2 + "<br>");
+           write(greeting3 + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

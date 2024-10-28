@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Practice</title>
+    <script>
+        const thaydoi = () => {
+           var label = document.getElementById("btn").value;
+           var size = document.getElementById("imgQuote").width;
+
+           if (label == "zoom-out") {
+            document.getElementById("btn").value = "zoom-in";
+            document.getElementById("imgQuote").width = size * 2;
+           }
+           else {
+            document.getElementById("btn").value="zoom-out";
+            document.getElementById("imgQuote").width= size * 1/2;
+           }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="zoom-out" onclick="thaydoi()">
+    <hr align="left" width="300">
+    <img width="400" id="imgQuote" src="./img/Capture.PNG" >
+</body>
+</html>

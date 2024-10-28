@@ -11,51 +11,70 @@
     /*
         ^  : statement to check the first character
         $  : statement to check the last character
-        [A-Za-z]: alphabet
+        [0-9] : digit
+        [A-Za-z]   : alphabet
         [A-Za-z0-9]: alphanumeric
-
-
+        +   : loop từ 1
+        *   : loop từ 0
+        \d  : digit
+        \w  : alphanumeric
+        \s  : space
+        {m,n} : min (max), max (n)
+        {m, } : min
+        {m}   : fix
     */
     function kiemTra() {
         //I. Name
+            // //1.Quan sát (Đọc lỗi)
+            // var sName = document.getElementById("txtName").value;
+            // var reName = /^[A-Za-z0-9 ]+$/;
+
+            // //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+            // if (!reName.test(sName)) { //(reName.test(sName) == false)
+            //     //3. Thổi còi
+            //     alert('Tên không được bỏ trống!');
+            //     document.getElementById("txtName").focus();
+            //     //4. Phạt
+            //     return false;
+            // }
+
+        // //II. Mail
+            // //1.Quan sát (Đọc lỗi)
+            // var sMail = document.getElementById("txtMail").value;
+            // var reMail = /^\w+[@]\w+[.]\w+([.]\w+)?$/;
+
+            // //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+            // if (!reMail.test(sMail)) { 
+            //     //3. Thổi còi
+            //     alert('Email is invalid !');
+            //     document.getElementById("txtMail").focus();
+            //     //4. Phạt
+            //     return false;
+            // }
+
+        //     //III. Phone
             //1.Quan sát (Đọc lỗi)
-            var sName = document.getElementById("txtName").value;
-            var reName = /^[A-Za-z0-9]/;
+            var sPhone = document.getElementById("txtPhone").value;
+            var rePhone = /^\d{8,12}$/;
 
             //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
-            if (!reName.test(sName)) { //(reName.test(sName) == false)
+           
+            if (isNaN(sPhone)) { 
                 //3. Thổi còi
-                alert('Tên không được bỏ trống!');
-                document.getElementById("txtName").focus();
+                alert('Phone is digit only!');
+                document.getElementById("txtPhone").focus();
+                document.getElementById("txtPhone").value = "";
                 //4. Phạt
                 return false;
             }
 
-        // //II. Mail
-        //     //1.Quan sát (Đọc lỗi)
-        //     var sMail = document.getElementById("txtMail").value;
-
-        //     //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
-        //     if ((sMail.indexOf("@") < 0) || (sMail.indexOf(".") < 0)) { 
-        //         //3. Thổi còi
-        //         alert('Email is invalid !');
-        //         document.getElementById("txtMail").focus();
-        //         //4. Phạt
-        //         return false;
-        //     }
-
-        //     //III. Phone
-        //         //1.Quan sát (Đọc lỗi)
-        //         var sPhone = document.getElementById("txtPhone").value;
-
-        //         //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
-        //         if (isNaN(sPhone)) { 
-        //             //3. Thổi còi
-        //             alert('Phone is digit only!');
-        //             document.getElementById("txtPhone").focus();
-        //             //4. Phạt
-        //             return false;
-        //         }
+            if (!rePhone.test(sPhone)) {
+                //3. Thổi còi
+                alert('Phone is only the rang of 8 to 12!');
+                document.getElementById("txtPhone").focus();
+                //4. Phạt
+                return false;
+            }
     }
 </script>
 

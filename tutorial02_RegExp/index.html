@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoria</title>
+    <script>
+        // function batLoi() {
+        const batLoi = () => {
+            var sClass = document.getElementById("txtClass").value;
+            var reClass = /^[T]\d{1}[.]\d{4}[.][M | A | E]{1}[0 | 1]{1}$/      //T1.2409.M0
+            if (sClass.length == "") {
+                alert("Class không được bỏ trống!");
+                document.getElementById("txtClass").focus;
+                return false;
+            }
+
+            if (!reClass.test(sClass)) {
+                alert("Bạn nhập không đúng !");
+                document.getElementById("txtClass").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="https://fap.fptacademy.vn/" onsubmit="return batLoi()">
+        Class name: <input id="txtClass">
+        <br>
+        <button>Create new Class</button>
+
+    </form>
+</body>
+
+</html>
