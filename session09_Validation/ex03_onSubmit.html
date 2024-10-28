@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready By Name</title>
+</head>
+<script>
+    function kiemTra (){
+       return false;
+       //nếu không viết gì hết => nó cũng mặc định là TRUE
+    }
+</script>
+<body>
+    <form action="https://supersimple.dev" onsubmit="return kiemTra()">
+        <!-- 
+            onsubmit="return true": có hay không cũng vậy
+            => nó được hiểu là mặc định TRUE
+        -->
+        Email: <input id="txtMail">
+        <button>Register</button>
+    </form>
+</body>
+</html>

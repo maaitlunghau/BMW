@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready By Name</title>
+</head>
+<script>
+    function readData(){
+        //Method 1: dùng 1 lần và không sử dụng cho các lần sau
+        // var sMail = frmRegister.txtMail.value;
+        var sMail = document.getElementById("txtMail").value
+        alert("Giá trị vừa nhập là: " + sMail);
+
+        // //Method 2: Lát hỏi thầy , dùng được nhiều lần 
+        // var idMail = document.getElementById("txtMail");
+        // var sMail = idMail
+    }
+</script>
+<body>
+    <form>
+        Email: <input id="txtMail" onblur="readData();">
+    </form>
+</body>
+</html>

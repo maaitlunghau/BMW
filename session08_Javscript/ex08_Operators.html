@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1">
+    <!-- statement to each 1second so  fresh  web once time -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <script>
+        /*
+            Type - 1: Ternary
+            + Syntax: (Conditional)? True : False 
+            Ex:
+            -------------
+
+            var homnay = new Date();
+            //new: function to call constructer function
+
+            var hour = homnay.getHours()
+            var minutes = homnay.getMinutes();
+            var second = homnay.getSeconds();
+            var months = homnay.getMonth();
+
+            //------------------------------------------
+                //Syntax: (Condition)? True : False;
+                hour = (hour < 10)? "0" + hour : hour;
+                minutes = (minutes < 10)? "0" + minutes : minutes;
+                second = (second < 10)? "0" + second : second;
+            //------------------------------------------
+
+            var display = hour + " : " + minutes + " : " + second + " : " + months;
+            document.write("<h1>" + display + "</h1>");
+            -------------
+        */
+
+        /* 
+            Type - 2: Relational / Comparison
+
+
+
+        */
+           var x = 5, display;
+           
+          // ===: equal to value and type
+           if (x === "5") {
+                display = true;
+           } 
+           else {
+                display = false;
+            // x equal to value of 5 but not equal to type
+           }
+
+           document.write(display);
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+<!--
+    1. Type - 1:
+        - Unary
+        - Binary
+        - Ternary (x)
+    2. Type - 2:
+        - Arithmetic
+        - Relational (x)
+        - Logical
+        - Bitwise
+-->

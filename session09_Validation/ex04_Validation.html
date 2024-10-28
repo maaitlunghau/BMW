@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready By Name</title>
+</head>
+<script>
+    function kiemTra() {
+        //I. Name
+            //1.Quan sát (Đọc lỗi)
+            var sName = document.getElementById("txtName").value;
+
+            //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+            if (sName.length == 0) { //(sName.length == "")
+                //3. Thổi còi
+                alert('Tên không được bỏ trống!');
+                document.getElementById("txtName").focus();
+                //4. Phạt
+                return false;
+            }
+
+        //II. Mail
+            //1.Quan sát (Đọc lỗi)
+            var sMail = document.getElementById("txtMail").value;
+
+            //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+            if ((sMail.indexOf("@") < 0) || (sMail.indexOf(".") < 0)) { 
+                //3. Thổi còi
+                alert('Email is invalid !');
+                document.getElementById("txtMail").focus();
+                //4. Phạt
+                return false;
+            }
+
+            //III. Phone
+                //1.Quan sát (Đọc lỗi)
+                var sPhone = document.getElementById("txtPhone").value;
+
+                //2. Kiểm tra lỗi (Đối chiếu với điều kiện)
+                if (isNaN(sPhone)) { 
+                    //3. Thổi còi
+                    alert('Phone is digit only!');
+                    document.getElementById("txtPhone").focus();
+                    //4. Phạt
+                    return false;
+                }
+    }
+</script>
+
+<body>
+    <form action="https://supersimple.dev" onsubmit="return kiemTra()">
+        Full name: <input id="txtName"> <br>
+        Email: <input id="txtMail"> <br>
+        Phone: <input id="txtPhone"> <br>
+        <button>Register</button>
+    </form>
+</body>
+
+</html>
